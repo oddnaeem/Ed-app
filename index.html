@@ -1,60 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Browser UI</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .browser-ui {
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
-        .address-bar {
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            padding: 5px;
-        }
-        .address-bar input[type="text"] {
-            flex: 1;
-            border: none;
-            outline: none;
-            font-size: 16px;
-        }
-        .address-bar button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            padding: 5px 10px;
-            margin-left: 5px;
-            cursor: pointer;
-        }
-        .browser-content {
-            height: 400px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="browser-ui">
-        <div class="address-bar">
-            <input type="text" placeholder="Enter URL">
-            <button>Go</button>
-        </div>
-        <div class="browser-content">
-            <!-- Web page content goes here -->
-        </div>
+    <div class="clip-book">
+        <input type="text" id="document-title" placeholder="Document Title">
+        <textarea id="document-content" placeholder="Document Content"></textarea>
+        <button onclick="addDocument()">Add Document</button>
     </div>
+    <div class="documents" id="documents-list">
+        <!-- Documents will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
